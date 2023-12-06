@@ -11,8 +11,6 @@ public class ClockController : MonoBehaviour
 
     private Quaternion initialRotation;
 
-    //private TimeZoneInfo timeZone;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +22,6 @@ public class ClockController : MonoBehaviour
     void Update()
     {
         DateTime now = DateTime.Now;
-
-        //Debug.Log("Current Time: " + now.ToString());
 
         // The hour hand also moves slightly as the minutes pass. In one hour (60 minutes), the hour hand moves 30 degrees.
         // Therefore, for each minute, the hour hand moves 30 degrees / 60 minutes = 0.5 degrees per minute
@@ -41,6 +37,13 @@ public class ClockController : MonoBehaviour
         secondHand.transform.localRotation = Quaternion.Euler(secondDegrees, 0, 0) * initialRotation;
     }
 }
+/*
+    Non-Frame-Rate Dependent: The rotation of the clock hands is directly set to match the current time and does not rely on the 
+    frame rate of the game. Whether the game runs at 30 FPS or 60 FPS, the clock hands will point to the exact time based on DateTime.Now.
+
+    No Cumulative Movement: Unlike movements that accumulate over time (like moving an object across the screen), 
+    the clock hands' rotation is calculated fresh each frame based on the current time, without accumulating or depending on previous frames.
+ */
 
 /*
     In Unity, the order in which you multiply quaternions is crucial because quaternion multiplication is not commutative. 
