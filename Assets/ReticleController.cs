@@ -14,8 +14,6 @@ public class ReticleController : MonoBehaviour
     private float pulseTimer = 0.0f;
     private Vector3 baseScale;
 
-    //private Quaternion initialRotation;
-
     void Start()
     {
         baseScale = this.transform.localScale;
@@ -37,7 +35,7 @@ public class ReticleController : MonoBehaviour
         else
         {
             // Reset to base scale when not hovering
-            transform.localScale = baseScale;
+            this.transform.localScale = baseScale;
             pulseTimer = 0.0f; // Reset the pulse timer
         }
     }
