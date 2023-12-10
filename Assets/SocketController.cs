@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketController : MonoBehaviour
 {
-    public XRGrabInteractable startingInteractable;
+    public XRBaseInteractable startingInteractable;
 
     // Start is called before the first frame update
     void Start()
