@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headset: {fileID: 920921514}
   maxIntensity: 8
-  minDistanceForMaxIntensity: 0.5
+  minDistanceForMaxIntensity: 2.5
 --- !u!1 &997436073
 GameObject:
   m_ObjectHideFlags: 0

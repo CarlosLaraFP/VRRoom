@@ -20,7 +20,7 @@ public class HatGlowController : MonoBehaviour
 
     [SerializeField]
     [Min(0)]
-    private float minDistanceForMaxIntensity = 0.5f;
+    private float minDistanceForMaxIntensity = 1f;
 
     private Renderer meshRenderer;
     private Material material;
